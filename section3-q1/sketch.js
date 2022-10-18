@@ -15,8 +15,12 @@ function draw(){
   count = (count + cspeed) % cycle;
 
   ellipse(width / 2, height / 2, size);
-  size = 100 + count * 2
-  if(size > width){size = 300 - count * 2};
-    if(keyIsDown(UP_ARROW)){(cspeed = 4)}
-  else{cspeed = 1}
+  size = 150 + count
+  if(keyIsDown(UP_ARROW)){(cspeed = 4)}
+  else{cspeed = 2}
+  if(size > width){
+    size = 250 - count
+    cspeed = 1
+  };
+
 }
