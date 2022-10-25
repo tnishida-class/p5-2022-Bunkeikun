@@ -17,8 +17,13 @@ function setup(){
   // ここからが本番
   fill(0);
   const dx = width / scores.length;
-  let px, py; // 線を引くために一つ前の点を覚えておく変数
+  let px, py, cx, cy; // 線を引くために一つ前の点を覚えておく変数
   for(let i = 0; i < scores.length; i++){
-    // BLANK[1]
+    cx = dx * i + 10
+    cy = height * scores[i] / 100 - 40
+    ellipse(cx, cy, 10)
+    line(cx , cy, px, py)
+    px = cx
+    py = cy
   }
 }
