@@ -8,7 +8,7 @@ function setup(){
 }
 
 function balloon(t, bx, by, cx, cy, bc){
-//bc は "black" か "white" で指定
+//bc は "black" か "white" で指定。ほしければもっと追加できる
   let w = textWidth(t);
   let h = textAscent() + textDescent();
   let p = 2;
